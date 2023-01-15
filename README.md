@@ -15,4 +15,8 @@ docker exec -it django_container /bin/bash
 # docker with react
 npx create-react-app core-react
 docker build --tag react .
-docker-compose run app
+docker run --publish 3000:3000 react
+
+# docker-compose react
+docker-compose build
+docker-compose up

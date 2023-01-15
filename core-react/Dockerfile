@@ -1,19 +1,7 @@
-
-# Dockerfile for python django
-#FROM python:3.8
-#ENV PYTHONUNBUFFERED=1
-#WORKDIR /django
-#COPY requirements.txt requirements.txt
-#RUN pip3 install -r requirements.txt
-
-#COPY . .
-#CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
-
-########################################################################
+# dockerfile for react
 
 FROM node:15.13-alpine
-WORKDIR /docker-notes/core-react
+WORKDIR /core-react
 ENV PATH="./node_modules/.bin:$PATH"
 COPY . .
 RUN npm run build
-CMD ["npm", "start"]
